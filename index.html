@@ -3,189 +3,397 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shreyas Suresh - Portfolio</title>
+    <title>Shreyas Suresh - Developer Portfolio | Chess.com Style</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icons8-chess-com-48.png">
 </head>
 <body>
-    <div class="chess-pattern"></div>
-    <!-- Left Sidebar -->
-    <aside class="sidebar-left">
-        <a href="index.html" class="logo">
-            <i class="fas fa-chess-knight"></i>
-            Shreyas Suresh
-        </a>
-        <ul class="nav-menu">
-            <li><a href="index.html" class="active"><i class="fas fa-home"></i>Home</a></li>
-            <li><a href="about.html"><i class="fas fa-user"></i>About Me</a></li>
-            <li><a href="projects.html"><i class="fas fa-code"></i>Projects</a></li>
-            <li><a href="#experience"><i class="fas fa-briefcase"></i>Experience</a></li>
-            <li><a href="#skills"><i class="fas fa-tools"></i>Skills</a></li>
-            <li><a href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
-        </ul>
-    </aside>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-left">
+                <a href="#" class="logo">
+                    <img src="images/icons8-chess-com-48.png" alt="Chess.com" width="32" height="32">
+                    <span>Chess.com</span>
+                </a>
+            </div>
+            <nav class="header-nav">
+                <a href="#" class="nav-item active">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0L0 8h2v8h4v-6h4v6h4V8h2L8 0z"/>
+                    </svg>
+                    Home
+                </a>
+                <a href="#" class="nav-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 14c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"/>
+                    </svg>
+                    Play
+                </a>
+                <a href="#" class="nav-item">Puzzles</a>
+                <a href="#" class="nav-item">Learn</a>
+                <a href="#" class="nav-item">Watch</a>
+                <a href="#" class="nav-item">News</a>
+                <a href="#" class="nav-item">Social</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-item">More ▼</a>
+                </div>
+            </nav>
+            <div class="header-right">
+                <button class="btn-upgrade">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0l2.5 5h5.5l-4.5 3.5 1.5 5.5-4.5-3.5-4.5 3.5 1.5-5.5-4.5-3.5h5.5z"/>
+                    </svg>
+                    Upgrade
+                </button>
+                <button class="btn-login">Log In</button>
+                <button class="btn-signup">Sign Up</button>
+            </div>
+        </div>
+    </header>
 
     <!-- Main Content -->
-    <main class="main-content">
-        <section class="hero-section">
-            <div class="profile-section">
-                <img src="images/profile.jpg" alt="Shreyas Suresh" class="profile-image">
-                <div class="profile-info">
-                    <h1>Shreyas Suresh</h1>
-                    <p>📍 Vadodara, India | 📱 +91 9677064161 | ✉️ shreyas30i@gmail.com</p>
-                    <div class="social-links">
-                        <a href="https://github.com/yourusername" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/yourusername" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://leetcode.com/yourusername" target="_blank">
-                            <i class="fas fa-code"></i>
-                        </a>
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Shreyas Suresh - Master Developer!</h1>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <div class="stat-number">2450+</div>
+                                <div class="stat-label">Coding ELO</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">6+</div>
+                                <div class="stat-label">Hackathons</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">2</div>
+                                <div class="stat-label">Active Roles</div>
+                            </div>
+                        </div>
+                        <div class="hero-buttons">
+                            <button class="btn-play-online">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"/>
+                                </svg>
+                                Play Online
+                            </button>
+                            <button class="btn-play-computer">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M18 3H2C.9 3 0 3.9 0 5v8c0 1.1.9 2 2 2h6l-2 2v1h8v-1l-2-2h6c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+                                </svg>
+                                Play Computer
+                            </button>
+                        </div>
                     </div>
-                    <button class="animated-button">
-                        <span>Download Resume</span>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience">
-            <h2 class="section-title">Experience</h2>
-            <div class="experience-card">
-                <h3>React Native Developer - ICMR Project</h3>
-                <p class="experience-meta">Parul University | Feb 2025 - Present</p>
-                <ul class="experience-details">
-                    <li>Developing and optimizing a survey application for household data collection</li>
-                    <li>Implementing complex looped forms, managing state, API integration, and UI/UX enhancements</li>
-                    <li>Tech Stack: React Native, JavaScript, Redux, Firebase, API Integration</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="project-grid">
-                <article class="project-card">
-                    <h3>Nectar - iOS Groceries Delivery App</h3>
-                    <p>A Swift UI-based grocery delivery app with an intuitive UI featuring secure authentication, real-time product browsing, cart management, and order tracking.</p>
-                    <div class="project-tags">
-                        <span>Swift UI</span>
-                        <span>Firebase</span>
-                        <span>Core Data</span>
-                        <span>MVVM</span>
-                    </div>
-                    <div class="project-links">
-                        <button class="animated-button">
-                            <span>View on GitHub</span>
-                        </button>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <h3>Sign Language to Text Converter</h3>
-                    <p>A real-time system to convert sign language into text, capturing video, detecting hand movements, recognizing gestures, and displaying text.</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>OpenCV</span>
-                        <span>Machine Learning</span>
-                    </div>
-                    <div class="project-links">
-                        <button class="animated-button">
-                            <span>View on GitHub</span>
-                        </button>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-categories">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">C (Proficient)</div>
-                        <div class="skill-item">JAVA (Proficient)</div>
-                        <div class="skill-item">JavaScript (Beginner)</div>
-                        <div class="skill-item">Python (Intermediate)</div>
-                        <div class="skill-item">Swift (Intermediate)</div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Frameworks & Tools</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">TensorFlow</div>
-                        <div class="skill-item">Keras</div>
-                        <div class="skill-item">Scikit-learn</div>
-                        <div class="skill-item">PyTorch</div>
-                        <div class="skill-item">Git</div>
-                        <div class="skill-item">VS Code</div>
+                    <div class="hero-board">
+                        <div class="board-container">
+                            <img src="images/profile.jpg" alt="Shreyas Suresh" class="profile-background">
+                            <div class="chess-board" id="main-board"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h2 class="section-title">Get in Touch</h2>
-            <div class="contact-card">
-                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
-                <div class="contact-buttons">
-                    <button class="animated-button">
-                        <span>Email Me</span>
-                    </button>
-                    <button class="animated-button">
-                        <span>LinkedIn</span>
-                    </button>
+        <!-- Quick Play Section -->
+        <section class="quick-play">
+            <div class="container">
+                <div class="quick-play-header">
+                    <h2>Quick Play</h2>
+                    <p>Jump right into a game!</p>
+                </div>
+                <div class="game-modes">
+                    <div class="game-mode" data-time="1+0">
+                        <div class="mode-icon">⚡</div>
+                        <div class="mode-name">Bullet</div>
+                        <div class="mode-time">1 min</div>
+                    </div>
+                    <div class="game-mode" data-time="3+0">
+                        <div class="mode-icon">🏃</div>
+                        <div class="mode-name">Blitz</div>
+                        <div class="mode-time">3 min</div>
+                    </div>
+                    <div class="game-mode" data-time="10+0">
+                        <div class="mode-icon">🚶</div>
+                        <div class="mode-name">Rapid</div>
+                        <div class="mode-time">10 min</div>
+                    </div>
+                    <div class="game-mode" data-time="30+0">
+                        <div class="mode-icon">🐌</div>
+                        <div class="mode-name">Classical</div>
+                        <div class="mode-time">30 min</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="resume">
-            <h2 class="section-title">Resume</h2>
-            <div class="resume-card">
-                <p>Download my complete resume to learn more about my experience and skills.</p>
-                <div class="resume-buttons">
-                    <button class="animated-button">
-                        <span>Download PDF</span>
-                    </button>
-                    <button class="animated-button">
-                        <span>View Online</span>
-                    </button>
+        <!-- Portfolio Section (disguised as features) -->
+        <section class="features">
+            <div class="container">
+                <h2>Why Choose Shreyas?</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">📱</div>
+                        <h3>iOS Development Master</h3>
+                        <p>SwiftUI expertise with Firebase integration. Built Nectar grocery delivery app with secure authentication and real-time features.</p>
+                        <a href="#" class="feature-link">View Project →</a>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🤖</div>
+                        <h3>AI & Machine Learning</h3>
+                        <p>TensorFlow, Keras, PyTorch proficiency. Created sign language to text converter using OpenCV and MediaPipe.</p>
+                        <a href="#" class="feature-link">Explore AI →</a>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">⚛️</div>
+                        <h3>React Native Expert</h3>
+                        <p>Currently developing ICMR survey app with complex forms, Redux state management, and Firebase integration.</p>
+                        <a href="#" class="feature-link">View Progress →</a>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🎓</div>
+                        <h3>CS Engineering Student</h3>
+                        <p>B.Tech in Computer Science (AI) at Parul University. Strong foundation in algorithms, data structures, and software development.</p>
+                        <a href="#" class="feature-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Games (Experience) -->
+        <section class="live-games">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Live Games</h2>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                <div class="games-list">
+                    <div class="game-row">
+                        <div class="players">
+                            <div class="player white">
+                                <img src="images/profile.jpg" alt="Shreyas" class="avatar">
+                                <div class="player-info">
+                                    <div class="name">Shreyas Suresh (2450)</div>
+                                    <div class="title">Software Developer UI/UX</div>
+                                </div>
+                            </div>
+                            <div class="vs">vs</div>
+                            <div class="player black">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%2300d4aa'/%3E%3Ctext x='16' y='20' text-anchor='middle' fill='white' font-size='10'%3EVH%3C/text%3E%3C/svg%3E" alt="Vitalise" class="avatar">
+                                <div class="player-info">
+                                    <div class="name">Vitalise Healthcare</div>
+                                    <div class="title">Startup Challenge</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-status">
+                            <div class="time">May 2025 - Present</div>
+                            <div class="status active">● Live Match</div>
+                        </div>
+                    </div>
+                    <div class="game-row">
+                        <div class="players">
+                            <div class="player white">
+                                <img src="images/profile.jpg" alt="Shreyas" class="avatar">
+                                <div class="player-info">
+                                    <div class="name">Shreyas Suresh (2415)</div>
+                                    <div class="title">AI/ML Specialist</div>
+                                </div>
+                            </div>
+                            <div class="vs">vs</div>
+                            <div class="player black">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23ff6b6b'/%3E%3Ctext x='16' y='20' text-anchor='middle' fill='white' font-size='10'%3EAI%3C/text%3E%3C/svg%3E" alt="AI" class="avatar">
+                                <div class="player-info">
+                                    <div class="name">AI ML Hackathon</div>
+                                    <div class="title">Vadodara Local</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-status">
+                            <div class="time">June 2025</div>
+                            <div class="status completed">AI Victory 🤖</div>
+                        </div>
+                    </div>
+                    <div class="game-row">
+                        <div class="players">
+                            <div class="player white">
+                                <img src="images/profile.jpg" alt="Shreyas" class="avatar">
+                                <div class="player-info">
+                                    <div class="name">Shreyas Suresh (2420)</div>
+                                    <div class="title">Bitcoin Hackathon</div>
+                                </div>
+                            </div>
+                            <div class="vs">vs</div>
+                            <div class="player black">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23f7931a'/%3E%3Ctext x='16' y='20' text-anchor='middle' fill='white' font-size='12'%3E₿%3C/text%3E%3C/svg%3E" alt="Bitcoin" class="avatar">
+                                <div class="player-info">
+                                    <div class="name">Bitcoin Official Hackathon</div>
+                                    <div class="title">Online Competition</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-status">
+                            <div class="time">May 2025</div>
+                            <div class="status completed">Participated 🚀</div>
+                        </div>
+                    </div>
+                    <div class="game-row">
+                        <div class="players">
+                            <div class="player white">
+                                <img src="images/profile.jpg" alt="Shreyas" class="avatar">
+                                <div class="player-info">
+                                    <div class="name">Shreyas Suresh (2405)</div>
+                                    <div class="title">Code Amplifier</div>
+                                </div>
+                            </div>
+                            <div class="vs">vs</div>
+                            <div class="player black">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23ff6b35'/%3E%3Ctext x='16' y='20' text-anchor='middle' fill='white' font-size='10'%3EAC%3C/text%3E%3C/svg%3E" alt="Amplicode" class="avatar">
+                                <div class="player-info">
+                                    <div class="name">Amplicode Hackathon</div>
+                                    <div class="title">Code Challenge</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-status">
+                            <div class="time">May 2025</div>
+                            <div class="status completed">Code Victory 💻</div>
+                        </div>
+                    </div>
+                    <div class="game-row">
+                        <div class="players">
+                            <div class="player white">
+                                <img src="images/profile.jpg" alt="Shreyas" class="avatar">
+                                <div class="player-info">
+                                    <div class="name">Shreyas Suresh (2410)</div>
+                                    <div class="title">Algorithm Master</div>
+                                </div>
+                            </div>
+                            <div class="vs">vs</div>
+                            <div class="player black">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%234285f4'/%3E%3Ctext x='16' y='20' text-anchor='middle' fill='white' font-size='10'%3EAA%3C/text%3E%3C/svg%3E" alt="Algo" class="avatar">
+                                <div class="player-info">
+                                    <div class="name">Algo Arena Hackathon</div>
+                                    <div class="title">Algorithm Challenge</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-status">
+                            <div class="time">April 2025</div>
+                            <div class="status completed">Algorithm Win 🎯</div>
+                        </div>
+                    </div>
+                    <div class="game-row">
+                        <div class="players">
+                            <div class="player white">
+                                <img src="images/profile.jpg" alt="Shreyas" class="avatar">
+                                <div class="player-info">
+                                    <div class="name">Shreyas Suresh (2400)</div>
+                                    <div class="title">React Native Developer</div>
+                                </div>
+                            </div>
+                            <div class="vs">vs</div>
+                            <div class="player black">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23312e2b'/%3E%3Ctext x='16' y='20' text-anchor='middle' fill='white' font-size='12'%3EICMR%3C/text%3E%3C/svg%3E" alt="ICMR" class="avatar">
+                                <div class="player-info">
+                                    <div class="name">ICMR Survey Project</div>
+                                    <div class="title">Parul University</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-status">
+                            <div class="time">Feb 2025 - Present</div>
+                            <div class="status active">● In Progress</div>
+                        </div>
+                    </div>
+                    <div class="game-row">
+                        <div class="players">
+                            <div class="player white">
+                                <img src="images/profile.jpg" alt="Shreyas" class="avatar">
+                                <div class="player-info">
+                                    <div class="name">Shreyas Suresh (2350)</div>
+                                    <div class="title">Hackathon Participant</div>
+                                </div>
+                            </div>
+                            <div class="vs">vs</div>
+                            <div class="player black">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23f7941e'/%3E%3Ctext x='16' y='20' text-anchor='middle' fill='white' font-size='10'%3E426%3C/text%3E%3C/svg%3E" alt="Vadodara" class="avatar">
+                                <div class="player-info">
+                                    <div class="name">Vadodara Hackathon 5.0</div>
+                                    <div class="title">426 Participants</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-status">
+                            <div class="time">2024</div>
+                            <div class="status completed">Top 45 🏆</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Right Sidebar -->
-    <aside class="sidebar-right">
-        <div class="action-card">
-            <h3>Achievements</h3>
-            <div class="achievement-item">
-                <i class="fas fa-trophy"></i>
-                <p>Vadodara Hackathon 5.0 (2024) - Top 45 Teams</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Play</h4>
+                    <a href="#">Online Chess</a>
+                    <a href="#">Play Computer</a>
+                    <a href="#">Chess Variants</a>
+                    <a href="#">Arena Kings</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Learn</h4>
+                    <a href="#">Chess Basics</a>
+                    <a href="#">Practice</a>
+                    <a href="#">Coordinates</a>
+                    <a href="#">Study</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Watch</h4>
+                    <a href="#">Twitch</a>
+                    <a href="#">Chess TV</a>
+                    <a href="#">Chess Events</a>
+                </div>
+                <div class="footer-section">
+                    <h4>News</h4>
+                    <a href="#">Chess.com</a>
+                    <a href="#">ChessBase</a>
+                    <a href="#">Chess News</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Social</h4>
+                    <a href="#">Discord</a>
+                    <a href="#">Reddit</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                </div>
+                <div class="footer-section">
+                    <h4>More</h4>
+                    <a href="#">Developers & API</a>
+                    <a href="#">Chess.com for Business</a>
+                    <a href="#">Chess.com for Education</a>
+                </div>
             </div>
-            <div class="achievement-item">
-                <i class="fas fa-medal"></i>
-                <p>Vidya Bharathi Nationals (2018) - Silver Medal in Archery</p>
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="mailto:shreyas30j@gmail.com">shreyas30j@gmail.com</a>
+                    <a href="tel:+919677064161">+91 9677064161</a>
+                    <a href="#">Vadodara, India</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2024 Shreyas Suresh - Portfolio styled as Chess.com
+                </div>
             </div>
         </div>
-
-        <div class="action-card">
-            <h3>Quick Links</h3>
-            <button class="animated-button">
-                <span>Download Resume</span>
-            </button>
-            <button class="animated-button">
-                <span>Contact Me</span>
-            </button>
-        </div>
-    </aside>
-
-    <footer>
-        <p>&copy; 2024 Shreyas Suresh | All Rights Reserved</p>
     </footer>
 
     <script src="script.js"></script>
