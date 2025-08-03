@@ -1,5 +1,25 @@
 // Exact Chess.com Clone JavaScript
 
+// Among Us Sound and Hikaru Popup
+function playAmongUsAndShowHikaru() {
+    const sound = document.getElementById('amongUsSound');
+    const popup = document.getElementById('hikaruPopup');
+    
+    sound.currentTime = 0;
+    sound.play().catch(() => {});
+    
+    popup.classList.add('show');
+    setTimeout(() => {
+        popup.classList.remove('show');
+    }, 2000);
+}
+
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('btn-play-online') || e.target.classList.contains('btn-play-computer')) {
+        playAmongUsAndShowHikaru();
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     initializeChessBoard();
     initializeGameModes();
