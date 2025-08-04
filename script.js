@@ -1,6 +1,6 @@
 // Exact Chess.com Clone JavaScript
 
-// Among Us Sound and Hikaru Popup
+// Among Us Sound and Popup
 function playAmongUsAndShowHikaru() {
     const sound = document.getElementById('amongUsSound');
     const popup = document.getElementById('hikaruPopup');
@@ -9,9 +9,31 @@ function playAmongUsAndShowHikaru() {
     sound.play().catch(() => {});
     
     popup.classList.add('show');
+    
+    const emergencyText = document.createElement('div');
+    emergencyText.innerHTML = '⚠️ EMERGENCY MEETING: Impostor detected debugging chess algorithms! 🚨';
+    emergencyText.style.cssText = `
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #ff4757;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-align: center;
+        z-index: 10001;
+    `;
+    document.body.appendChild(emergencyText);
+    
     setTimeout(() => {
         popup.classList.remove('show');
     }, 2000);
+    
+    setTimeout(() => {
+        emergencyText.remove();
+    }, 7000);
 }
 
 document.addEventListener('click', function(e) {
