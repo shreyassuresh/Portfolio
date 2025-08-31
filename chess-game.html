@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess vs Computer - Shreyas Portfolio</title>
+    <link rel="stylesheet" href="chess-game.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>Chess vs Computer</h1>
+            <div class="game-info">
+                <div class="player-info">
+                    <span class="player-name">You</span>
+                    <span class="player-color">White</span>
+                </div>
+                <div class="vs">VS</div>
+                <div class="player-info">
+                    <span class="player-name">Shreyas AI</span>
+                    <span class="player-color">Black</span>
+                </div>
+            </div>
+            <button class="btn-back" onclick="window.close()">← Back to Portfolio</button>
+        </div>
+        
+        <div class="game-board-container">
+            <div class="chess-board" id="chess-board"></div>
+            <div class="game-controls">
+                <button class="btn-new-game" onclick="startNewGame()">New Game</button>
+                <button class="btn-hint" onclick="getHint()">Hint</button>
+                <div class="game-status" id="game-status">Your turn - Move White</div>
+            </div>
+        </div>
+        
+        <div class="move-history">
+            <h3>Move History</h3>
+            <div class="moves-list" id="moves-list"></div>
+        </div>
+    </div>
+    
+    <script src="chess-engine.js"></script>
+</body>
+</html>

@@ -49,11 +49,19 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeNavigation();
 });
 
-// Chess pieces in Unicode
-const pieces = {
-    'K': '♔', 'Q': '♕', 'R': '♖', 'B': '♗', 'N': '♘', 'P': '♙',
-    'k': '♚', 'q': '♛', 'r': '♜', 'b': '♝', 'n': '♞', 'p': '♟'
-};
+// Chess pieces SVG mapping
+function getPieceImage(piece) {
+    const isWhite = piece === piece.toUpperCase();
+    const color = isWhite ? 'white' : 'black';
+    const pieceType = piece.toLowerCase();
+    
+    const pieceNames = {
+        'k': 'king', 'q': 'queen', 'r': 'rook', 
+        'b': 'bishop', 'n': 'knight', 'p': 'pawn'
+    };
+    
+    return `images/pieces/${color}-${pieceNames[pieceType]}.svg`;
+}
 
 // Starting chess position
 const startingPosition = [
@@ -92,7 +100,12 @@ function initializeChessBoard() {
             
             const piece = gameBoard[row][col];
             if (piece) {
-                square.textContent = pieces[piece];
+                const img = document.createElement('img');
+                img.src = getPieceImage(piece);
+                img.alt = piece;
+                img.className = 'chess-piece';
+                img.draggable = false;
+                square.appendChild(img);
                 square.dataset.piece = piece;
             }
             
@@ -125,9 +138,13 @@ function handleSquareClick(square, row, col) {
             gameBoard[fromRow][fromCol] = '';
             
             // Update display
-            square.textContent = selectedSquare.textContent;
-            square.dataset.piece = selectedSquare.dataset.piece;
-            selectedSquare.textContent = '';
+            const pieceImg = selectedSquare.querySelector('.chess-piece');
+            if (pieceImg) {
+                square.innerHTML = '';
+                square.appendChild(pieceImg.cloneNode(true));
+                square.dataset.piece = selectedSquare.dataset.piece;
+            }
+            selectedSquare.innerHTML = '';
             delete selectedSquare.dataset.piece;
             
             // Show move animation
@@ -261,6 +278,11 @@ function showFeatureModal(title) {
 }
 
 function showPlayModal(action) {
+    if (action === 'Play Computer') {
+        window.open('chess-game.html', '_blank', 'width=1200,height=800');
+        return;
+    }
+    
     const content = `
         <div class="play-modal">
             <p>Ready to ${action.toLowerCase()}?</p>
@@ -657,3 +679,47 @@ const modalCSS = `
 const style = document.createElement('style');
 style.textContent = modalCSS;
 document.head.appendChild(style);
+
+// Flip Board Functionality
+let isFlipped = false;
+let autoFlipTimeout = null;
+
+function flipBoard() {
+    const board = document.getElementById('main-board');
+    const profileImg = document.querySelector('.profile-background');
+    const button = document.querySelector('.flip-board-btn');
+    
+    if (!isFlipped) {
+        // Flip to show photo
+        isFlipped = true;
+        board.classList.add('flipped');
+        profileImg.style.opacity = '1';
+        profileImg.style.zIndex = '3';
+        button.innerHTML = 'Back <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>';
+        
+        // Auto flip back after 5 seconds
+        autoFlipTimeout = setTimeout(() => {
+            flipBack();
+        }, 5000);
+    } else {
+        // Manual flip back
+        flipBack();
+    }
+}
+
+function flipBack() {
+    const board = document.getElementById('main-board');
+    const profileImg = document.querySelector('.profile-background');
+    const button = document.querySelector('.flip-board-btn');
+    
+    if (autoFlipTimeout) {
+        clearTimeout(autoFlipTimeout);
+        autoFlipTimeout = null;
+    }
+    
+    board.classList.remove('flipped');
+    profileImg.style.opacity = '0.3';
+    profileImg.style.zIndex = '1';
+    button.innerHTML = 'Reveal <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>';
+    isFlipped = false;
+}
