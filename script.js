@@ -371,6 +371,7 @@ function getNavigationContent(section) {
     const sections = {
         'Home': 'Welcome to Shreyas Suresh\'s portfolio, cleverly disguised as Chess.com!',
         'Play': 'This section would contain various game modes and matchmaking features.',
+        'Profile': 'View detailed DSA stats, competitive programming achievements, and coding journey.',
         'Puzzles': 'Chess puzzles and tactical training would be available here.',
         'Learn': 'Educational content and chess lessons would be provided in this section.',
         'Watch': 'Live games, tournaments, and chess streams would be featured here.',
@@ -383,6 +384,9 @@ function getNavigationContent(section) {
         <div class="navigation-content">
             <p>${sections[section] || 'This section is under development.'}</p>
             <p class="modal-note">This is actually Shreyas Suresh's portfolio website designed to look exactly like Chess.com!</p>
+            <div class="modal-actions">
+                <button class="btn-profile" onclick="window.open('profile.html', '_blank')">View DSA Profile</button>
+            </div>
         </div>
     `;
 }
@@ -574,6 +578,28 @@ const modalCSS = `
     padding: 12px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 4px;
+}
+
+.modal-actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-profile {
+    background: var(--chess-green);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-size: 14px;
+}
+
+.btn-profile:hover {
+    background: var(--chess-green-hover);
+    transform: translateY(-1px);
 }
 
 .tech-tags {
